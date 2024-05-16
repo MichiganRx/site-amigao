@@ -1,4 +1,7 @@
 <?php
+
+
+
 session_start();
 include('banco.php');
 include('class.php');
@@ -12,7 +15,7 @@ if (isset($_POST['login'])) {
     $inputData = [   
         'login' => mysqli_real_escape_string($db->conn, $_POST['login']),
         'senha' => mysqli_real_escape_string($db->conn, $_POST['senha']),
-        
+        'nome' => mysqli_real_escape_string($db->conn, $_POST['nome'])        
     ];
 
 

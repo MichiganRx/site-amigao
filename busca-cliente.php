@@ -111,7 +111,7 @@ if(isset($_POST['excluir_usuario'])) {
               <span><?=$linha['login']?></span>
             </div>
             <div>
-              <span><?=$linha['data']?></span>
+              <span><?=$linha['data_cad']?></span>
             </div>
             <div>
               <form method="POST" action="">
@@ -119,7 +119,7 @@ if(isset($_POST['excluir_usuario'])) {
                 <input type="hidden" name="nome_usuario" value="<?=$linha['nome']?>">
                 <input type="hidden" name="imagem_usuario" value="<?=$linha['imagem']?>">
                 <input type="hidden" name="login_usuario" value="<?=$linha['login']?>">
-                <input type="hidden" name="data" value="<?=$linha['data']?>">
+                <input type="hidden" name="data" value="<?=$linha['data_cad']?>">
                 <button type="submit" name="editar_usuario">
                   <img src="./img/editar.png" alt="">
                 </button>

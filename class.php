@@ -98,6 +98,7 @@ class funcionario
     {
         $login = $inputData['login'];
         $senha = $inputData['senha'];
+        
 
         $sql = "select * from usuario where login='" . $login . "' and senha='" . $senha . "'";
         $result = $this->conn->query($sql);
@@ -113,25 +114,25 @@ class funcionario
     }
 
     public function criarUsuario($inputData)
-    {
-        $login = $inputData['login'];
-        $senha = $inputData['senha'];
-        
+{
+    $login = $inputData['login'];
+    $senha = $inputData['senha'];
+    $nome = $inputData['nome'];
+   // $data_cad = $inputData['data_cad'];
+    date_default_timezone_set('America/Sao_Paulo');
+    $tempo = date("Y-m-d H:i:s");
+    //$data_cad_formatada = date('Y-m-d H:i:s', strtotime($data_cad));
 
+    $sql = "INSERT INTO usuario (login, senha, nome, data_cad) VALUES ('$login', '$senha', '$nome', '$tempo')";
+    $result = $this->conn->query($sql);
 
-
-        
-        $sql = "INSERT INTO usuario (login,senha) VALUES ('$login','$senha')";
-        $result = $this->conn->query($sql);
-
-        if ($result == 1) {
-            return true;
-        } else {
-            return false;
-        }
+    if ($result == 1) {
+        return true;
+    } else {
+        return false;
     }
 }
-
+}
 class Usuario {
     public $conn;
 

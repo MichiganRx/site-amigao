@@ -19,7 +19,6 @@
   background-color: #252525;
   border: 1px solid #3D3D3D;
   border-radius: 20px;
-  min-width: 600px;
 }
 
 .container-search{
@@ -244,5 +243,28 @@
       color: aliceblue;
       background-color: rgb(114, 20, 36);
     }
+  }
+}
+
+.add-produto{
+  display: flex;
+  padding: 5px 10px;
+  border-radius: 20px;
+  border: 1px solid #3D3D3D;
+  border-radius: 20px;
+  background-color: #212121;
+  margin-left: 20px;
+  align-items: center;
+  gap: 10px;
+  color: #686868;
+  font-weight: 600;
+
+  & > span{
+    white-space: nowrap;
+  }
+
+  & > img{
+    width: 20px;
+    height: 20px;
   }
 }

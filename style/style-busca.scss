@@ -1,0 +1,248 @@
+*{
+  box-sizing: border-box;
+
+  & button,
+  & input{
+    background-color: transparent;
+    border: none;
+  }
+}
+
+.content-wrapper{
+  background-color: #212121 !important;
+  padding: 50px;
+  min-width: fit-content;
+  min-height: 100vh;
+}
+
+.content{
+  background-color: #252525;
+  border: 1px solid #3D3D3D;
+  border-radius: 20px;
+  min-width: 600px;
+}
+
+.container-search{
+  justify-content: space-between;
+  margin-bottom: 10px;
+
+  & > form{
+    width: 250px;
+    display: flex;
+    border: 1px solid #3D3D3D;
+    border-radius: 20px;
+    background-color: #212121;
+
+    & button{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 35px;
+
+      & img{
+        width: 15px;
+        height: 15px;
+      }
+    }
+
+    & input{
+      background-color: transparent;
+      border: none;
+      padding: 5px 0;
+      color: #FFFFFF;
+
+      &:focus {
+        outline: none;
+    }
+    }
+  }
+}
+
+.container-title{
+  border-bottom: 1px solid #454545;
+  padding: 10px 0;
+}
+
+.container-table{
+  padding: 20px;
+
+  & span{
+    color: $color-light;
+    @include text-style-bold-button;
+  }
+
+  & thead {
+    & > tr{
+      border-bottom: 1px solid $color-dark-4;
+
+      & td{
+        align-items: flex-start;
+        padding: 10px 5px;
+        color: $color-primary-1;
+        @include text-style-bold-button;
+      }
+    }
+  }
+
+  & > div{
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    & > button{
+      background-color: transparent;
+      border: none;
+    }
+
+    & > div{
+      display: flex;
+      padding: 10px;
+    }
+
+    & > div:nth-child(1){
+      width: 5%;
+      min-width: 40px;
+    }
+    & > div:nth-child(2){
+      width: 10%;
+      min-width: 60px;
+
+      & img{
+        width: 50px;
+        height: 50px;
+        border-radius: 8px;
+      }
+    }
+    & > div:nth-child(3){
+      width: 45%;
+      min-width: 100px;
+    }
+    & > div:nth-child(4){
+      width: 10%;
+      min-width: 100px;
+    }
+    & > div:nth-child(5){
+      width: 10%;
+      min-width: 100px;
+    }
+    & > div:nth-child(6){
+      width: 10%;
+      min-width: 60px;
+      display: flex;
+      justify-content: flex-end;
+
+      & img{
+        width: 25px;
+        height: 25px;
+      }
+    }
+    & div:nth-child(7){
+      width: 10%;
+      min-width: 60px;
+      display: flex;
+      justify-content: flex-end;
+
+      & img{
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+
+  & tbody {
+    width: 100%;
+    border-collapse: collapse;
+
+    & td{
+      color: $color-light;
+      padding: 15px 5px;
+      @include text-style-bold-button;
+
+      & a{
+        color: $color-light;
+      }
+    }
+
+    & td:nth-child(1){
+      padding: 15px 20px;
+    }
+  }
+}
+
+.container-edita{
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);    
+}
+
+.form-edita{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  width: 350px;
+
+  & > div{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px;
+
+    & h4{
+      font-size: 22px;
+    }
+
+    & button{
+      background-color: transparent;
+      border: none;
+    }
+
+    & img{
+      width: 35px;
+      height: 35px;
+      margin-top: -20px;
+      margin-right: -10px;
+    }
+  }
+
+  & input{
+    width: 100%;
+    background-color: transparent;
+    border:none;
+    border-bottom: 1px solid #454545;
+    font-size: 18px;
+    padding: 10px 5px;
+    color: #FFFFFF;
+    margin-bottom: 10px;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  & > button{
+    width: 100%;
+    height: 30px;
+    border-radius: 10px;
+    border: 1px solid rgb(114, 20, 36);
+    color: rgb(114, 20, 36);
+    background-color: aliceblue;
+    transition: 0.2s;
+    font-weight: 700;
+    font-size: 14px;
+    margin-top: 30px;
+    height: 35px;
+    cursor: pointer;
+
+    &:hover{
+      color: aliceblue;
+      background-color: rgb(114, 20, 36);
+    }
+  }
+}

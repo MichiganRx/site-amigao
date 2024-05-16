@@ -50,7 +50,7 @@ $retorno = $funcionario->criarUsuario($inputData);
 
     if ($retorno) {
         $_SESSION['message'] = "Cadastro ok - bem vindo " . $_POST['nome'];
-        header("location: login/login.html?c=1");
+        header("location: ./index.html?c=1");
         exit(0);
     } else {
         $_SESSION['message'] = "errou BB";

@@ -18,7 +18,7 @@
         
         $_SESSION['username'] = $login;
 
-    header('location: index.php');
+    header('location: home.php');
     }else{
         $_SESSION['message'] = "Login incorreto";
     header('location: login/login.html');

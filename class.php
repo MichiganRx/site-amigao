@@ -66,6 +66,37 @@ class EditarProduto
     }
 }
 
+class InserirProduto
+{
+    public $conn;
+
+    public function __construct()
+    {
+        $db = new banco;
+        $this->conn = $db->conn;
+    }
+
+    public function inserirProduto($dados)
+    {
+        $nome = $this->conn->real_escape_string($dados['nome']);
+        $imagem = $this->conn->real_escape_string($dados['imagem']);
+        $valor = $this->conn->real_escape_string($dados['valor']);
+        $quantidade = $this->conn->real_escape_string($dados['quantidade']);
+        $sql = "INSERT INTO produto (nome, imagem, valor, quantidade) VALUES (?, ?, ?, ?)";
+        
+        $stmt = $this->conn->prepare($sql);
+        $stmt->bind_param("ssdi", $nome, $imagem, $valor, $quantidade);
+        
+        if ($stmt->execute()) {
+            return true;
+        } else {
+            echo "Erro ao inserir produto: " . $stmt->error;
+            return false;
+        }
+    }
+
+}
+
 class produto
 {
     public $conn;
